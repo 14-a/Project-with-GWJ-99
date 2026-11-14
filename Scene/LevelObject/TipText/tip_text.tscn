@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://djmnuq8iw4s4s"]
+
+[ext_resource type="Script" uid="uid://bst8cqexup7s" path="res://Scene/LevelObject/TipText/tip_text.gd" id="1_2rhnf"]
+
+[node name="TipText" type="Node2D" unique_id=1471230330]
+script = ExtResource("1_2rhnf")
+
+[node name="Label" type="Label" parent="." unique_id=957549284]
+offset_left = -0.065
+offset_top = -0.18
+offset_right = 9.935
+offset_bottom = 22.82
+scale = Vector2(0.085, 0.085)
+text = "测试"

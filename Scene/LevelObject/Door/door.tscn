@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://c22740sv5fuxt"]
+
+[ext_resource type="Script" uid="uid://bhn6y0wpw7mhs" path="res://Scene/LevelObject/Door/door.gd" id="1_pqw1p"]
+[ext_resource type="PackedScene" uid="uid://djmnuq8iw4s4s" path="res://Scene/LevelObject/TipText/tip_text.tscn" id="2_uxg3s"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_gdq80"]
+size = Vector2(1.5, 2.5)
+
+[sub_resource type="QuadMesh" id="QuadMesh_2ko72"]
+size = Vector2(1, 2.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gdq80"]
+size = Vector2(1.5, 2.5)
+
+[node name="Door" type="Node2D" unique_id=555490039]
+script = ExtResource("1_pqw1p")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=1737386558]
+position = Vector2(0, -1.255)
+mesh = SubResource("QuadMesh_gdq80")
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="." unique_id=459579218]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(0, -1.135)
+mesh = SubResource("QuadMesh_2ko72")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=223088873]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=432641188]
+position = Vector2(0, -1.25)
+shape = SubResource("RectangleShape2D_gdq80")
+
+[node name="TipText" parent="." unique_id=1471230330 instance=ExtResource("2_uxg3s")]
+position = Vector2(1, -4)
