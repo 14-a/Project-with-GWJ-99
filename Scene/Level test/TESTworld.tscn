@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://c03eqj4kvvwyq"]
+
+[ext_resource type="PackedScene" uid="uid://buv50k64yqqqn" path="res://Scene/Player/player.tscn" id="1_b313x"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_bnooq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mf1s4"]
+size = Vector2(1, 1)
+
+[node name="World" type="Node" unique_id=125865153]
+
+[node name="player" parent="." unique_id=1797917195 instance=ExtResource("1_b313x")]
+position = Vector2(0, -1)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=1544687100]
+position = Vector2(0, 1)
+scale = Vector2(30.870846, 1.5797857)
+mesh = SubResource("BoxMesh_bnooq")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="MeshInstance2D" unique_id=1154389667]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MeshInstance2D/StaticBody2D" unique_id=339350205]
+shape = SubResource("RectangleShape2D_mf1s4")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=651947759]
+zoom = Vector2(20, 20)
